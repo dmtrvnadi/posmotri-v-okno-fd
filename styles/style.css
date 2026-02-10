@@ -17,6 +17,8 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -53,13 +55,10 @@ ol {
 
 
 .content {
-  width: 1140px; /* перепроверить ширину*/
-  height: 534px;
+  width: 1140px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: auto;
-
+  align-items: flex-end;
 }
 
 .result {
@@ -97,10 +96,13 @@ ol {
 }
 
 .search-form__textfield {
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   width: 240px;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
+  border-left: none;
+  border-right: none;
   background-color: transparent;
   appearance: none;
   color: #fff;
@@ -110,15 +112,10 @@ ol {
   outline: none;
 }
 
-.search-form__label:has(.search-form__textfield:focus-visible) {
+.search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
 }
-
-.search-form__label:has(.search-form__checkbox:focus-visible) {
-  outline: 1px solid #fff;
-}
-
-
+    
 .search-form__textfield::placeholder {
   color: rgb(255 255 255 / 0.7);
 }
@@ -148,13 +145,9 @@ ol {
   border-bottom: 1px solid #fff;
 }
 
-.content__video-card:hover .content__video-card-description-container {
-  text-decoration: underline;
-}
-
 .content__list-container {
   height: 298px;
-  overflow-y: auto;
+  overflow: auto;
   position: relative;
 }
 
@@ -163,7 +156,6 @@ ol {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  margin-bottom: 85px;
 }
 
 .title {
@@ -190,6 +182,14 @@ ol {
   color: #fff;
 }
 
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+}
+
 .content__card-link_current {
   background-color: #545050;
 }
@@ -197,6 +197,10 @@ ol {
 .content__card-link:active {
   background-color: #545050;
 }
+
+.content__card-link:hover {
+  text-decoration: underline;
+} 
 
 .content__video-card-title {
   font-family: "Oswald", sans-serif;
@@ -228,6 +232,7 @@ ol {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .content__list {
@@ -244,7 +249,8 @@ ol {
   text-align: center;
   color: #fff;
   border: 1px solid #fff;
-  cursor: pointer
+  cursor: pointer;
+  height: 34px;
 }
 
 .button:hover {
@@ -260,17 +266,15 @@ ol {
  }
 
  .button:focus-visible {
-  outline: 1px solid pink;
+  outline: 1px solid #fff;
  }
 
  .search-form__submit-button {
   width: 194px;
-  height: 34px;
   margin-top: 15px;
  }
 
 .more-button {
-  height: 34px;
   width: 399px;
   margin-top: 30px;
 }
@@ -292,7 +296,7 @@ ol {
 .content__video-card-description-container {
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /*не уверена что правильно, 7 пункт во втором задании */
+  flex-grow: 1;
 }
 
 .visually-hidden {
