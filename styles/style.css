@@ -104,7 +104,6 @@ ol {
   background-color: transparent;
   appearance: none;
   color: #fff;
-  appearance: none;
 }
 
 .search-form__textfield:focus {
@@ -151,10 +150,10 @@ ol {
 
 .search-form__label:hover .search-form__label-text {
   text-decoration: none;
-  border-bottom: 1px solid #fff; 
+  border-bottom: 1px solid #fff;
 }
 
-.content__video-card:hover .content__video-card-description-container{
+.content__video-card:hover .content__video-card-description-container {
   text-decoration: underline;
 }
 
@@ -295,7 +294,7 @@ ol {
 }
 
 
-.content__video-card-description-container{
+.content__video-card-description-container {
   display: flex;
   flex-direction: column;
   flex-grow: 1; /*не уверена что правильно, 7 пункт во втором задании */
